@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Liars Dice Rules</string>
+    <string name="header">Rules</string>
+    <string name="bodyText">This is a placeholder for all the text on each page. It will contain quite a lot of text. Probably 3 or 4 sentences per page.</string>
+    <string name="previous">Previous</string>
+    <string name="play">Play</string>
+    <string name="next">Next</string>
+</resources>

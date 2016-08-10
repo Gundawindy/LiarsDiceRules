@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This is the root view. It is a RelativeView because it needs to contain an imageView
+ with textViews and buttonViews overlapping the imageView -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.liarsdicerules.MainActivity">
+
+    <!-- This imageView provides the background image -->
+    <ImageView
+        android:src="@drawable/appicon"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        />
+    <!-- This LinearLayout contains all the text and buttons on screen -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+        <!-- This TextView is the Heading at the top of the page.
+        Its style has been defined as HeaderTextStyle in the style.xml file.
+        The text it contains is defined as header in strings.xml -->
+        <TextView
+            style="@style/HeaderTextStyle"
+            android:text="@string/header"
+            />
+
+        <!-- This TextView is the main body of text.
+        Its style has been defined as BodyTextStyle in the style.xml file.
+        The text it contains is defined as bodyText in strings.xml -->
+        <TextView
+            style="@style/BodyTextStyle"
+            android:text="@string/bodyText"
+            />
+
+        <!-- This RelativeLayout contains the buttons at the bottom of the screen. -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+
+            <!-- This ButtonView is used to view the previous body of text
+            Its style has been defined as ButtonStyle in the style.xml file.
+            The text in this button is defined as previous in strings.xml -->
+            <Button
+                style="@style/ButtonStyle"
+                android:layout_alignParentLeft="true"
+                android:text="@string/previous"
+                />
+
+            <!-- This ButtonView is used to play a game of liars dice.
+             Its style has been defined as ButtonStyle in the style.xml file.
+             The text in this button is defined as play in strings.xml
+             I have made its visibility gone because it has no functionality yet. -->
+            <Button
+                android:visibility="gone"
+                style="@style/ButtonStyle"
+                android:layout_centerHorizontal="true"
+                android:text="@string/play"
+                />
+
+            <!-- This ButtonView is used to view the next body of text
+            Its style has been defined as ButtonStyle in the style.xml file.
+            The text in this button is defined as next in strings.xml-->
+            <Button
+                style="@style/ButtonStyle"
+                android:layout_alignParentRight="true"
+                android:text="@string/next"
+                />
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
